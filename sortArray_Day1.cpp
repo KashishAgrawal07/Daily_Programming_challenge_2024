@@ -6,7 +6,7 @@ class Solution {
 public:
     void sortArray(vector<int>& arr) {
         int zCnt = 0, oCnt = 0;
-        for(int color : nums){
+        for(int color : arr){
             if(color == 0){
                 zCnt++;
             }
