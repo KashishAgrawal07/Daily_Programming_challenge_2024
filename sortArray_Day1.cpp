@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution {
 public:
-    void sortArray(vector<int>& nums) {
+    void sortArray(vector<int>& arr) {
         int zCnt = 0, oCnt = 0;
         for(int color : nums){
             if(color == 0){
@@ -15,14 +15,14 @@ public:
             }
         }
         
-       for(int i = 0;i < nums.size(); i++){
+       for(int i = 0;i <arr.size(); i++){
         if(i < zCnt)
-            nums[i] = 0;
+            arr[i] = 0;
         else if( i < zCnt + oCnt)
-            nums[i] = 1;
+            arr[i] = 1;
         
         else
-            nums[i] = 2;
+            arr[i] = 2;
 
        }
 
@@ -31,11 +31,11 @@ public:
 
 int main(){
     Solution s;
-    vector<int> input_arr = {0,1,2,1,0,2,1,0};
+    vector<int> arr = {0,1,2,1,0,2,1,0};
 
-    s.sortArray(input_arr);
+    s.sortArray(arr);
 
-    for(int i : input_arr){
+    for(int i : arr){
         cout<<i<<" ";
     }
 
